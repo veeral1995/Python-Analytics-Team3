@@ -55,8 +55,8 @@ def calculateCorrelationCoefficients(df):
 df = pandas.read_csv('./Data/winequality.csv', encoding="ISO-8859-1")
 df = df.drop(df.columns[0], axis=1)
 
-#plotHistograms(df) ##1
-featureScatterPlot(df) ##2
+plotHistograms(df) ##1
+#featureScatterPlot(df) ##2
 #correlatedScatterPlot(df)  ##3
 # calculateAvgAlcoholContent(df)  ##4
 # calculateCorrelationCoefficients(df) ##5
