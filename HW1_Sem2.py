@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 def plotHistograms(df):
     for chart_title in df.columns[0:12]:
         df[chart_title].hist(bins=10)
-        plt.axvline(df[chart_title].mean())
+        plt.axvline(df[chart_title].mean(), color='k', linestyle='dashed')
         plt.ylabel('Frequency')
         plt.xlabel(chart_title)
         plt.title('Frequency of ' + chart_title + ': Histogram Plot')
@@ -56,7 +56,7 @@ df = pandas.read_csv('./Data/winequality.csv', encoding="ISO-8859-1")
 df = df.drop(df.columns[0], axis=1)
 
 plotHistograms(df) ##1
-#featureScatterPlot(df) ##2
-#correlatedScatterPlot(df)  ##3
-# calculateAvgAlcoholContent(df)  ##4
-# calculateCorrelationCoefficients(df) ##5
+featureScatterPlot(df) ##2
+correlatedScatterPlot(df)  ##3
+calculateAvgAlcoholContent(df)  ##4
+calculateCorrelationCoefficients(df) ##5
